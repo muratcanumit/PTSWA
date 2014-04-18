@@ -1,0 +1,9 @@
+def send_key_email(survelliance_key, email):
+        email_subject = "KHAS Help Desk"
+        email_body = ("Servise biraktiginiz urununuzun takip anahtari: "
+                      + survelliance_key + " , ile Sitemizden Durumunu "
+                      "takip edebilirsiniz. Iyi Gunler.")
+        from_mail = "muratcanumit@gmail.com"
+        to_mail = email
+        send_mail(email_subject, email_body,
+                  from_mail, to_mail, fail_silently=False)
