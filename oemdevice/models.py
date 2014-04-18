@@ -1,6 +1,7 @@
 from django.db import models
 from hashlib import sha1
 from random import random
+from libs.mailsender import send_key_email
 
 PROD_TYPE = (
     ('OEM Parca', 'OEM Parca'),
@@ -48,6 +49,21 @@ class OEMDevice (models.Model):
         return self.current_situation == "Teslim Edildi"
     received_or_not.boolean = True
     received_or_not.short_description = 'Teslim Edildi mi?'
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            message = ("Servise biraktiginiz urununuzun takip anahtari: " +
+                       self.survelliance_key + " , ile Sitemizden Durumunu "
+                       "takip edebilirsiniz. \nIyi Gunler.")
+            send_key_email(self.email, message)
+        else:
+            message = ("Urununuzun islemi bitmis olup, teslime hazirdir." +
+                       "\nServise biraktiginiz urununuzun takip anahtari: "
+                       + self.survelliance_key + " , ile Sitemizden Durumunu "
+                       "takip edebilirsiniz. \nIyi Gunler.")
+            send_key_email(self.email, message)
+
+        super(OEMDevice, self).save(*args, **kwargs)
 
 
 class Meta:
