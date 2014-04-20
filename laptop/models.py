@@ -32,7 +32,7 @@ class Laptop (models.Model):
     owner_name = models.CharField(max_length=25,
                                   verbose_name="Urun Sahibinin Adi")
     owner_lastname = models.CharField(max_length=25,
-                                      verbose_name="Urun Sahibinin Soyadi")
+                                      verbose_name="Soyadi")
     phone = models.CharField(max_length=10,
                              verbose_name="Telefon Numarasi")
     email = models.EmailField(verbose_name="E-Posta Adresi")

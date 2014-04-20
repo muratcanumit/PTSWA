@@ -68,6 +68,7 @@ PROD_TYPE_MOBILE = (
     ('iPad', 'iPad'),
     ('Android Tablet', 'Android Tablet'),
     ('Windows Tablet', 'Windows Tablet'),
+    ('Other', 'Other')
 )
 
 # Product MOBILE TABLET and PHONE Choices for MobileDevice Model
@@ -237,7 +238,7 @@ PROD_BRAND_MOBILE = (
 # OEM DEVICES
 # Product Type Choice for OEMDevice Model
 PROD_TYPE_OEM = (
-    ('OEM Parca', 'OEM Parca'),
+    ('OEM Device', 'OEM Device'),
 )
 
 # OTHER DEVICES
