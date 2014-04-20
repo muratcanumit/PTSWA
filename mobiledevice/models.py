@@ -2,7 +2,7 @@ from django.db import models
 from hashlib import sha1
 from random import random
 from libs.mailsender import send_key_email
-from libs.choices import PROD_TYPE_MOBILE, PROD_BRAND_MOBILE, PROD_SITUATION
+from libs.choices import (PROD_TYPE_MOBILE, PROD_BRAND_MOBILE, PROD_SITUATION)
 
 
 class MobileDevice (models.Model):
