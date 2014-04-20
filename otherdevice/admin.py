@@ -24,6 +24,7 @@ class OtherDevAdmin(admin.ModelAdmin):
                     'serial_number', 'received_or_not')
     list_filter = ['delivery_date', 'current_situation']
     search_fields = ['serial_number', 'survelliance_key',
-                     'owner_name', 'owner_lastname']
+                     'owner_name', 'owner_lastname',
+                     'brand_name', 'model_name']
 
 admin.site.register(OtherDevice, OtherDevAdmin)

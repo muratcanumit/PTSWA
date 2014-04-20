@@ -6,6 +6,7 @@ class DesktopAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,           {'fields': ['product_type',
                                      'serial_number',
+                                     'brand_name',
                                      'problem',
                                      'current_situation',
                                      'owner_name',
@@ -22,6 +23,6 @@ class DesktopAdmin(admin.ModelAdmin):
                     'received_or_not')
     list_filter = ['delivery_date', 'current_situation']
     search_fields = ['serial_number', 'survelliance_key',
-                     'owner_name', 'owner_lastname']
+                     'owner_name', 'owner_lastname', 'brand_name']
 
 admin.site.register(Desktop, DesktopAdmin)

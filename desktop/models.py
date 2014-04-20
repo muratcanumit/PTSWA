@@ -11,6 +11,8 @@ class Desktop (models.Model):
                                     verbose_name="Urunun Tipi")
     serial_number = models.CharField(max_length=50,
                                      verbose_name="Seri Numarasi")
+    brand_name = models.CharField(max_length=25, blank=True, null=True,
+                                  verbose_name="Urunun Markasi")
     problem = models.TextField(max_length=250,
                                verbose_name="Urunun Sorunu")
     current_situation = models.CharField(max_length=25,
