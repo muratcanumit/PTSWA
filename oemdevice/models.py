@@ -2,21 +2,12 @@ from django.db import models
 from hashlib import sha1
 from random import random
 from libs.mailsender import send_key_email
-
-PROD_TYPE = (
-    ('OEM Parca', 'OEM Parca'),
-)
-
-PROD_SITUATION = (
-    ('Teknik Serviste', 'Teknik Serviste'),
-    ('Teslime Hazir', 'Teslime Hazir'),
-    ('Teslim Edildi', 'Teslim Edildi'),
-)
+from libs.choices import PROD_TYPE_OEM, PROD_SITUATION
 
 
 class OEMDevice (models.Model):
     product_type = models.CharField(max_length=25,
-                                    choices=PROD_TYPE,
+                                    choices=PROD_TYPE_OEM,
                                     verbose_name="Urunun Tipi")
     brand_name = models.CharField(max_length=25,
                                   verbose_name="Urunun Markasi")
@@ -31,7 +22,7 @@ class OEMDevice (models.Model):
                                          verbose_name="Help Desk Kayit Tarihi")
     receive_date = models.DateTimeField(verbose_name="Teslim Tarihi",
                                         blank=True, null=True)
-    survelliance_key = models.CharField(max_length=30,
+    survelliance_key = models.CharField(max_length=15,
                                         default=sha1(str(random())).hexdigest(),
                                         unique=True,
                                         verbose_name="Takip Anahtari")
