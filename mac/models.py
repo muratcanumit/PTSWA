@@ -1,6 +1,5 @@
 from django.db import models
-from hashlib import sha1
-from random import random
+import uuid
 from libs.mailsender import send_key_email
 from libs.choices import PROD_TYPE_MAC, PROD_BRAND_MAC, PROD_SITUATION
 
@@ -15,7 +14,8 @@ class Mac (models.Model):
                                   choices=PROD_BRAND_MAC,
                                   verbose_name="Urunun Markasi")
     model_name = models.CharField(max_length=25,
-                                  verbose_name="Urunun Modeli")
+                                  verbose_name="Urunun Modeli",
+                                  blank=True, null=True)
     problem = models.TextField(max_length=250,
                                verbose_name="Urunun Sorunu")
     current_situation = models.CharField(max_length=25,
@@ -25,8 +25,7 @@ class Mac (models.Model):
                                          verbose_name="Help Desk Kayit Tarihi")
     receive_date = models.DateTimeField(verbose_name="Teslim Tarihi",
                                         blank=True, null=True)
-    survelliance_key = models.CharField(max_length=15,
-                                        default=sha1(str(random())).hexdigest(),
+    survelliance_key = models.CharField(max_length=25,
                                         unique=True,
                                         verbose_name="Takip Anahtari")
     owner_name = models.CharField(max_length=25,
@@ -46,6 +45,12 @@ class Mac (models.Model):
 
     def save(self, *args, **kwargs):
         if not self.id:
+            while True:
+                survelliance_key = str(uuid.uuid1())[:25]
+                if len(Mac.objects.filter(survelliance_key=survelliance_key)) == 0:
+                    self.survelliance_key = survelliance_key
+                    break
+
             message = ("Servise biraktiginiz urununuzun takip anahtari: " +
                        self.survelliance_key + " , ile Sitemizden Durumunu "
                        "takip edebilirsiniz. \nIyi Gunler.")
