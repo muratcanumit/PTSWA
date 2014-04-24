@@ -1,63 +1,65 @@
 from django.db import models
 import uuid
 from libs.mailsender import send_key_email
+from django.utils.translation import ugettext as _
 from libs.choices import DEVICE_TYPES, DEVICE_STATUS, DEVICE_BRANDS
 
 
 class Device (models.Model):
     survelliance_key = models.CharField(max_length=25,
                                         unique=True,
-                                        verbose_name="Record Key of Device")
+                                        verbose_name=_('Record Key of Device'))
 
     device_type = models.CharField(max_length=25,
                                    choices=DEVICE_TYPES,
-                                   verbose_name="Type of Device")
+                                   verbose_name=_('Type of Device'))
 
     serial_number = models.CharField(max_length=50,
-                                     verbose_name="Serial Number",
-                                     blank=True, null=True)
+                                     blank=True, null=True,
+                                     verbose_name=_('Serial Number'))
 
     brand_name = models.CharField(max_length=25,
                                   choices=DEVICE_BRANDS,
                                   blank=True, null=True,
-                                  verbose_name="Name of Brand")
+                                  verbose_name=_('Name of Brand'))
 
     model_name = models.CharField(max_length=25,
-                                  verbose_name="Name of Model",
-                                  blank=True, null=True)
+                                  blank=True, null=True,
+                                  verbose_name=_('Name of Model'))
 
     problem = models.TextField(max_length=250,
-                               verbose_name="Problem of Device")
+                               verbose_name=_('Problem of Device'))
 
     current_status = models.CharField(max_length=25,
                                       choices=DEVICE_STATUS,
-                                      verbose_name="Device Status")
+                                      verbose_name=_('Device Status'))
 
     record_date = models.DateTimeField(auto_now_add=True,
-                                       verbose_name="Record Date")
+                                       verbose_name=_('Record Date'))
 
-    delivery_date = models.DateTimeField(verbose_name="Delivery Date",
-                                         blank=True, null=True)
+    delivery_date = models.DateTimeField(blank=True, null=True,
+                                         verbose_name=_('Delivery Date'))
 
     owner_name = models.CharField(max_length=25,
-                                  verbose_name="Name of Device's Owner")
+                                  verbose_name=_('Name of Device Owner'))
 
     owner_lastname = models.CharField(max_length=25,
-                                      verbose_name="Lastname")
+                                      verbose_name=_('Lastname'))
 
     phone_number = models.CharField(max_length=11,
-                                    verbose_name="Phone Number",
-                                    blank=True, null=True)
+                                    blank=True, null=True,
+                                    verbose_name=_('Phone Number'))
 
-    email = models.EmailField(verbose_name="Email Address")
+    email = models.EmailField(verbose_name=_('Email Address'))
 
-    khas_id = models.CharField(max_length=20, verbose_name="KHAS ID",
-                               blank=True, null=True)
+    khas_id = models.CharField(max_length=20,
+                               blank=True, null=True,
+                               verbose_name="KHAS ID")
 
     def received_or_not(self):
-        return self.current_status == "Delivered"
+        return self.current_status == _('Delivered')
     received_or_not.boolean = True
-    received_or_not.short_description = 'Delivered?'
+    received_or_not.short_description = _('Delivered?')
 
     def save(self, *args, **kwargs):
         if not self.id:

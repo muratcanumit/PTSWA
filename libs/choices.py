@@ -1,8 +1,10 @@
+from django.utils.translation import ugettext as _
+
 # Device Situation Choices in Model Files
 DEVICE_STATUS = (
-    ('at Technical Service', 'at Technical Service'),
-    ('Ready to Delivery', 'Ready to Delivery'),
-    ('Delivered', 'Delivered'),
+    ('at Technical Service', _('at Technical Service')),
+    ('Ready to Delivery', _('Ready to Delivery')),
+    ('Delivered', _('Delivered')),
 )
 
 # Device Brand Choices
@@ -26,7 +28,7 @@ DEVICE_BRANDS = (
         ('Sony', 'Sony'),
         ('Toshiba', 'Toshiba'),
         ('Trust', 'Trust'),
-        ('Other', 'Other'),
+        ('Other', _('Other')),
         )
     ),
 
@@ -64,11 +66,11 @@ DEVICE_BRANDS = (
         ('Utoo', 'Utoo'),
         ('Vodafone', 'Vodafone'),
         ('ZTE', 'ZTE'),
-        ('Other', 'Other'),
+        ('Other', _('Other')),
         )
     ),
 
-    ('WINDOWSPHONE',(
+    ('WINDOWSPHONE', (
         ('Alcatel', 'Alcatel'),
         ('Asus', 'Asus'),
         ('Avea', 'Avea'),
@@ -93,7 +95,7 @@ DEVICE_BRANDS = (
         ('Utoo', 'Utoo'),
         ('Vodafone', 'Vodafone'),
         ('ZTE', 'ZTE'),
-        ('Other', 'Other'),
+        ('Other', _('Other')),
         )
     ),
 
@@ -150,7 +152,7 @@ DEVICE_BRANDS = (
         ('Toshiba', 'Toshiba'),
         ('Unitab', 'Unitab'),
         ('Vippad', 'Vippad'),
-        ('Other', 'Other'),
+        ('Other', _('Other')),
         )
     ),
 
@@ -197,10 +199,10 @@ DEVICE_BRANDS = (
         ('Toshiba', 'Toshiba'),
         ('Unitab', 'Unitab'),
         ('Vippad', 'Vippad'),
-        ('Other', 'Other'),
+        ('Other', _('Other')),
         )
     ),
-    ('Unknown', 'Unknown')
+    ('Unknown', _('Unknown'))
 )
 
 # Device Type Choices
@@ -214,7 +216,7 @@ DEVICE_TYPES = (
         ('Laptop', 'Laptop'),
         ('Ultrabook', 'Ultrabook'),
         ('Netbook', 'Netbook'),
-        ('Gamebook', 'Gamebook'), 
+        ('Gamebook', 'Gamebook'),
         )
     ),
 
@@ -236,7 +238,7 @@ DEVICE_TYPES = (
         ('iPad', 'iPad'),
         ('Android Tablet', 'Android Tablet'),
         ('Windows Tablet', 'Windows Tablet'),
-        ('Other', 'Other'),
+        ('Other', _('Other')),
         )
     ),
 
@@ -245,10 +247,10 @@ DEVICE_TYPES = (
         )
     ),
 
-    ('OTHER', (
-        ('Other', 'Other'),
+    (_('OTHER DEVICE'), (
+        ('Other Device', _('Other Device')),
         )
     ),
 
-    ('Unknown', 'Unknown')
+    ('Unknown', _('Unknown'))
 )
