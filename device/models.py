@@ -40,7 +40,7 @@ class Device (models.Model):
                                          blank=True, null=True)
 
     owner_name = models.CharField(max_length=25,
-                                  verbose_name="Name of Device Owner")
+                                  verbose_name="Name of Device's Owner")
 
     owner_lastname = models.CharField(max_length=25,
                                       verbose_name="Lastname")
@@ -55,7 +55,7 @@ class Device (models.Model):
                                blank=True, null=True)
 
     def received_or_not(self):
-        return self.current_situation == "Delivered"
+        return self.current_status == "Delivered"
     received_or_not.boolean = True
     received_or_not.short_description = 'Delivered?'
 
@@ -67,15 +67,25 @@ class Device (models.Model):
                     self.survelliance_key = survelliance_key
                     break
 
-            message = ("Servise biraktiginiz urununuzun takip anahtari: " +
-                       self.survelliance_key + " , ile Sitemizden Durumunu "
-                       "takip edebilirsiniz. \nIyi Gunler.")
+            message = ("Servise biraktiginiz cihazinizin takip anahtari: " +
+                       self.survelliance_key +
+                       "\n\nwww.khashelpdesk.com adresinden "
+                       "takip anahtariniz ile arama yaparak "
+                       "ya da alttaki linke tiklayarak Cihazinizin Durumunu "
+                       "takip edebilirsiniz.\n\n"
+                       "www.khashelpdesk.com/device/" + self.survelliance_key +
+                       "\n\nIyi Gunler.")
             send_key_email(self.email, message)
         else:
-            message = ("Urununuzun islemi bitmis olup, teslime hazirdir." +
-                       "\nServise biraktiginiz urununuzun takip anahtari: "
-                       + self.survelliance_key + " , ile Sitemizden Durumunu "
-                       "takip edebilirsiniz. \nIyi Gunler.")
+            message = ("Servise biraktiginiz Cihazinizin islemi bitmistir."
+                       "\n\nCihazinizin takip anahtari: " +
+                       self.survelliance_key +
+                       "\n\nwww.khashelpdesk.com adresinden "
+                       "takip anahtariniz ile arama yaparak "
+                       "ya da alttaki linke tiklayarak Cihazinizin Durumunu "
+                       "takip edebilirsiniz.\n\n"
+                       "www.khashelpdesk.com/device/" + self.survelliance_key +
+                       "\n\nIyi Gunler.")
             send_key_email(self.email, message)
 
         super(Device, self).save(*args, **kwargs)

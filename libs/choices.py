@@ -1,8 +1,8 @@
 # Device Situation Choices in Model Files
 DEVICE_STATUS = (
-    ('Teknik Serviste', 'Teknik Serviste'),
-    ('Teslime Hazir', 'Teslime Hazir'),
-    ('Teslim Edildi', 'Teslim Edildi'),
+    ('at Technical Service', 'at Technical Service'),
+    ('Ready to Delivery', 'Ready to Delivery'),
+    ('Delivered', 'Delivered'),
 )
 
 # Device Brand Choices
