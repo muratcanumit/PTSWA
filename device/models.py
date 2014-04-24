@@ -69,29 +69,30 @@ class Device (models.Model):
                     self.survelliance_key = survelliance_key
                     break
 
-            message = ("Servise biraktiginiz cihazinizin takip anahtari: " +
+            message = (_('Survelliance key of your device'
+                       'that you left at help desk is : ' +
                        self.survelliance_key +
-                       "\n\nwww.khashelpdesk.com adresinden "
-                       "takip anahtariniz ile arama yaparak "
-                       "ya da alttaki linke tiklayarak Cihazinizin Durumunu "
-                       "takip edebilirsiniz.\n\n"
-                       "www.khashelpdesk.com/device/" + self.survelliance_key +
-                       "\n\nIyi Gunler.")
+                       '\n\nFrom the address that www.khashelpdesk.com ,'
+                       'you can search your device status with your key or '
+                       'directly reach with clicking the following link.\n\n'
+                       'www.khashelpdesk.com/device/' + self.survelliance_key +
+                       '\n\nHave a nice day.\n\n'
+                       'Kadir Has University Help Desk'))
             send_key_email(self.email, message)
         else:
-            message = ("Servise biraktiginiz Cihazinizin islemi bitmistir."
-                       "\n\nCihazinizin takip anahtari: " +
+            message = (_('Progress of your device at help desk is completed.'
+                       '\n\nSurvelliance key of your device is : ' +
                        self.survelliance_key +
-                       "\n\nwww.khashelpdesk.com adresinden "
-                       "takip anahtariniz ile arama yaparak "
-                       "ya da alttaki linke tiklayarak Cihazinizin Durumunu "
-                       "takip edebilirsiniz.\n\n"
-                       "www.khashelpdesk.com/device/" + self.survelliance_key +
-                       "\n\nIyi Gunler.")
+                       '\n\nFrom the address that www.khashelpdesk.com ,'
+                       'you can search your device status with your key or '
+                       'directly reach with clicking the following link.\n\n'
+                       'www.khashelpdesk.com/device/' + self.survelliance_key +
+                       '\n\nHave a nice day.\n\n'
+                       'Kadir Has University Help Desk'))
             send_key_email(self.email, message)
 
         super(Device, self).save(*args, **kwargs)
 
 
 class Meta:
-        ordering = ['-delivery_date']
+        ordering = ['-record_date']
