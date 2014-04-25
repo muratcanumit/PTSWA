@@ -75,7 +75,7 @@ class Device (models.Model):
                        '\n\nFrom the address that www.khashelpdesk.com ,'
                        'you can search your device status with your key or '
                        'directly reach with clicking the following link.\n\n'
-                       'www.khashelpdesk.com/device/' + self.survelliance_key +
+                       'www.khashelpdesk.com/device/search/' + self.survelliance_key +
                        '\n\nHave a nice day.\n\n'
                        'Kadir Has University Help Desk'))
             send_key_email(self.email, message)
@@ -86,7 +86,7 @@ class Device (models.Model):
                        '\n\nFrom the address that www.khashelpdesk.com ,'
                        'you can search your device status with your key or '
                        'directly reach with clicking the following link.\n\n'
-                       'www.khashelpdesk.com/device/' + self.survelliance_key +
+                       'www.khashelpdesk.com/device/search/' + self.survelliance_key +
                        '\n\nHave a nice day.\n\n'
                        'Kadir Has University Help Desk'))
             send_key_email(self.email, message)

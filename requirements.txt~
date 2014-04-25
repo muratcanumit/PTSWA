@@ -1,6 +1,7 @@
 Python==2.7.3
 Django==1.4.5
 argparse==1.2.1
+django-debug-toolbar==1.1
 ipdb==0.7
 ipython==1.0.0
 sqlparse==0.1.11
