@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-25 21:41+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: device/models.py:11
+msgid "Record Key of Device"
+msgstr "Record Key of Device"
+
+#: device/models.py:15 templates/device/status.html:16
+msgid "Type of Device"
+msgstr "Type of Device"
+
+#: device/models.py:19
+msgid "Serial Number"
+msgstr "Serial Number"
+
+#: device/models.py:24
+msgid "Name of Brand"
+msgstr "Name of Brand"
+
+#: device/models.py:28
+msgid "Name of Model"
+msgstr "Name of Model"
+
+#: device/models.py:31
+msgid "Problem of Device"
+msgstr "Problem of Device"
+
+#: device/models.py:35 templates/device/status.html:5
+msgid "Device Status"
+msgstr "Device Status"
+
+#: device/models.py:38 templates/device/status.html:28
+msgid "Record Date"
+msgstr "Record Date"
+
+#: device/models.py:41 templates/device/status.html:40
+msgid "Delivery Date"
+msgstr "Delivery Date"
+
+#: device/models.py:44
+msgid "Name of Device Owner"
+msgstr "Name of Device Owner"
+
+#: device/models.py:47
+msgid "Lastname"
+msgstr "Lastname"
+
+#: device/models.py:51
+msgid "Phone Number"
+msgstr "Phone Number"
+
+#: device/models.py:53
+msgid "Email Address"
+msgstr "Email Address"
+
+#: device/models.py:60 libs/choices.py:7
+msgid "Delivered"
+msgstr "Delivered"
+
+#: device/models.py:62
+msgid "Delivered?"
+msgstr "Delivered?"
+
+#: device/models.py:72
+msgid "Survelliance key of your device "
+msgstr "Survelliance key of your device "
+
+#: device/models.py:73
+msgid "that you left at help desk is : "
+msgstr "that you left at help desk is : "
+
+#: device/models.py:76 device/models.py:91
+msgid "From the address that www.khashelpdesk.com ,"
+msgstr "From the address that www.khashelpdesk.com ,"
+
+#: device/models.py:77 device/models.py:92
+msgid "you can search your device status using the key "
+msgstr "you can search your device status using the key "
+
+#: device/models.py:78 device/models.py:93
+msgid "or directly reach with clicking the link."
+msgstr "or directly reach with clicking the link."
+
+#: device/models.py:80 device/models.py:95
+msgid "Have a nice day."
+msgstr "Have a nice day."
+
+#: device/models.py:81 device/models.py:96
+msgid "Kadir Has University Help Desk"
+msgstr "Kadir Has University Help Desk"
+
+#: device/models.py:86
+msgid "Progress of your device is completed."
+msgstr "Progress of your device is completed."
+
+#: device/models.py:88
+msgid "Survelliance key of your device is : "
+msgstr "Survelliance key of your device is : "
+
+#: libs/choices.py:5
+msgid "at Technical Service"
+msgstr "at Technical Service"
+
+#: libs/choices.py:6
+msgid "Ready to Delivery"
+msgstr "Ready to Delivery"
+
+#: libs/choices.py:31 libs/choices.py:69 libs/choices.py:98
+#: libs/choices.py:155 libs/choices.py:202 libs/choices.py:241
+msgid "Other"
+msgstr "Other"
+
+#: libs/choices.py:205 libs/choices.py:255
+msgid "Unknown"
+msgstr "Unknown"
+
+#: libs/choices.py:250
+msgid "OTHER DEVICE"
+msgstr "OTHER DEVICE"
+
+#: libs/choices.py:251
+msgid "Other Device"
+msgstr "Other Device"
+
+#: templates/404.html:5 templates/500.html:5 templates/base.html:7
+#: templates/device/index.html:5 templates/device/status.html:5
+msgid "Kadir Has University"
+msgstr "Kadir Has University"
+
+#: templates/base.html:23
+msgid "Kadir Has University Help Desk Device Survelliance System"
+msgstr "Kadir Has University Help Desk Device Survelliance System"
+
+#: templates/base.html:25
+msgid "KHAS Home Page"
+msgstr "KHAS Home Page"
+
+#: templates/base.html:26
+msgid "Library"
+msgstr "Library"
+
+#: templates/base.html:29
+msgid "Email"
+msgstr "Email"
+
+#: templates/base.html:39
+msgid "Follow Us: "
+msgstr "Follow Us: "
+
+#: templates/base.html:59
+msgid "Kadir Has Campus (Cibali) Kadir Has Caddesi Cibali / Istanbul"
+msgstr "Kadir Has Campus (Cibali) Kadir Has Caddesi Cibali / Istanbul"
+
+#: templates/device/index.html:19
+msgid "Search"
+msgstr "Search"
+
+#: templates/device/status.html:13
+msgid "DEVICE INFORMATION"
+msgstr "DEVICE INFORMATION"
+
+#: templates/device/status.html:20
+msgid "Brand Name"
+msgstr "Brand Name"
+
+#: templates/device/status.html:24
+msgid "Model Name"
+msgstr "Model Name"
+
+#: templates/device/status.html:32
+msgid "Last Name of Device's Owner"
+msgstr "Last Name of Device's Owner"
+
+#: templates/device/status.html:36
+msgid "Current Status"
+msgstr "Current Status"
+
+#: templates/device/status.html:46
+msgid "Back to Home Page"
+msgstr "Back to Home Page"

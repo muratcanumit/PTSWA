@@ -43,7 +43,16 @@ TIME_ZONE = 'Europe/Istanbul'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
+
+LOCALE_PATHS = os.path.join(PROJECT_DIR, 'locale/'),
+
+ugettext = lambda s: s
+
+LANGUAGES = (
+    ('tr', ugettext(u'Turkish')),
+    ('en', ugettext(u'English')),
+)
 
 SITE_ID = 1
 
@@ -109,6 +118,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -165,9 +175,3 @@ LOGGING = {
         },
     }
 }
-
-ugettext = lambda s: s
-LANGUAGES = (
-    ('tr', u'Turkish'),
-    ('en-us', u'English'),
-)

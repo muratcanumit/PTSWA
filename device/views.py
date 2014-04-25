@@ -3,9 +3,7 @@ from device.models import Device
 
 
 def index(request):
-    devices_all = Device.objects.all().order_by('-record_date')
-    return render(request, 'device/index.html',
-                  {'devices_all': devices_all})
+        return render(request, 'device/index.html')
 
 
 def status(request, survelliance_key):

@@ -1,0 +1,198 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-25 21:20+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: device/models.py:11
+msgid "Record Key of Device"
+msgstr "Cihaz Takip Anahtarı"
+
+#: device/models.py:15 templates/device/status.html:16
+msgid "Type of Device"
+msgstr "Cihazın Tipi"
+
+#: device/models.py:19
+msgid "Serial Number"
+msgstr "Seri Numarası"
+
+#: device/models.py:24
+msgid "Name of Brand"
+msgstr "Marka Adı"
+
+#: device/models.py:28
+msgid "Name of Model"
+msgstr "Model Adı"
+
+#: device/models.py:31
+msgid "Problem of Device"
+msgstr "Cihazın Sorunu"
+
+#: device/models.py:35 templates/device/status.html:5
+msgid "Device Status"
+msgstr "Cihazın Durumu"
+
+#: device/models.py:38 templates/device/status.html:28
+msgid "Record Date"
+msgstr "Kayıt Tarihi"
+
+#: device/models.py:41 templates/device/status.html:40
+msgid "Delivery Date"
+msgstr "Teslim Tarihi"
+
+#: device/models.py:44
+msgid "Name of Device Owner"
+msgstr "Cihaz Sahibinin Adı"
+
+#: device/models.py:47
+msgid "Lastname"
+msgstr "Soyadı"
+
+#: device/models.py:51
+msgid "Phone Number"
+msgstr "Telefon Numarası"
+
+#: device/models.py:53
+msgid "Email Address"
+msgstr "E-mail Adresi"
+
+#: device/models.py:60 libs/choices.py:7
+msgid "Delivered"
+msgstr "Teslim Edildi"
+
+#: device/models.py:62
+msgid "Delivered?"
+msgstr "Teslim Edildi mi ?"
+
+#: device/models.py:72
+msgid "Survelliance key of your device "
+msgstr "Help Desk'e bıraktığınız cihazınızın "
+
+#: device/models.py:73
+msgid "that you left at help desk is : "
+msgstr "takip anahtarı : "
+
+#: device/models.py:76 device/models.py:91
+msgid "From the address that www.khashelpdesk.com ,"
+msgstr "www.khashelpdesk.com adresinden ,"
+
+#: device/models.py:77 device/models.py:92
+msgid "you can search your device status using the key "
+msgstr "takip anahtarınızla arama yaparak "
+
+#: device/models.py:78 device/models.py:93
+msgid "or directly reach with clicking the link."
+msgstr "ya da linke tıklayarak cihazınızın durumunu öğrenebilirsiniz."
+
+#: device/models.py:80 device/models.py:95
+msgid "Have a nice day."
+msgstr "İyi günler."
+
+#: device/models.py:81 device/models.py:96
+msgid "Kadir Has University Help Desk"
+msgstr "Kadir Has Üniversitesi Help Desk Birimi"
+
+#: device/models.py:86
+msgid "Progress of your device is completed."
+msgstr "Cihazınızın işlemi tamamlanmıştır."
+
+#: device/models.py:88
+msgid "Survelliance key of your device is : "
+msgstr "Cihazınızın takip anahtarı : "
+
+#: libs/choices.py:5
+msgid "at Technical Service"
+msgstr "Teknik Serviste"
+
+#: libs/choices.py:6
+msgid "Ready to Delivery"
+msgstr "Teslime Hazır"
+
+#: libs/choices.py:31 libs/choices.py:69 libs/choices.py:98
+#: libs/choices.py:155 libs/choices.py:202 libs/choices.py:241
+msgid "Other"
+msgstr "Diğer"
+
+#: libs/choices.py:205 libs/choices.py:255
+msgid "Unknown"
+msgstr "Bilinmiyor"
+
+#: libs/choices.py:250
+msgid "OTHER DEVICE"
+msgstr "DİĞER CİHAZ"
+
+#: libs/choices.py:251
+msgid "Other Device"
+msgstr "Diğer Cihaz"
+
+#: templates/404.html:5 templates/500.html:5 templates/base.html:7
+#: templates/device/index.html:5 templates/device/status.html:5
+msgid "Kadir Has University"
+msgstr "Kadir Has Üniversitesi"
+
+#: templates/base.html:23
+msgid "Kadir Has University Help Desk Device Survelliance System"
+msgstr "Kadir Has Üniversitesi Help Desk Cihaz Takip Sistemi"
+
+#: templates/base.html:25
+msgid "KHAS Home Page"
+msgstr "KHAS Anasayfa"
+
+#: templates/base.html:26
+msgid "Library"
+msgstr "Bilgi Merkezi"
+
+#: templates/base.html:29
+msgid "Email"
+msgstr "E-mail"
+
+#: templates/base.html:39
+msgid "Follow Us: "
+msgstr "Bizi Takip Edin: "
+
+#: templates/base.html:59
+#, fuzzy
+msgid "Kadir Has Campus (Cibali) Kadir Has Caddesi Cibali / Istanbul"
+msgstr "Kadir Has Kampüsü (Cibali) Kadir Has Caddesi Cibali / İstanbul"
+
+#: templates/device/index.html:19
+msgid "Search"
+msgstr "Ara"
+
+#: templates/device/status.html:13
+msgid "DEVICE INFORMATION"
+msgstr "CİHAZ BİLGİSİ"
+
+#: templates/device/status.html:20
+msgid "Brand Name"
+msgstr "Marka Adı"
+
+#: templates/device/status.html:24
+msgid "Model Name"
+msgstr "Model Adı"
+
+#: templates/device/status.html:32
+msgid "Last Name of Device's Owner"
+msgstr "Cihaz Sahibinin Soyadı"
+
+#: templates/device/status.html:36
+msgid "Current Status"
+msgstr "Cihazın Şu Anki Durumu"
+
+#: templates/device/status.html:46
+msgid "Back to Home Page"
+msgstr "Anasayfaya Geri Dön"

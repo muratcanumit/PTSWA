@@ -13,9 +13,10 @@
     <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     {% endblock %}
 
+<!-- Designed and Powered by KHAS Senior IT Students Murat Can Ümit and Doğukan Tokelli -->
+
   </head>
   <body>
-
 
   {% block body %}
   <div class="navbar navbar-static-top navbar-custom1">
@@ -27,6 +28,13 @@
       <li><a href="http://bys.khas.edu.tr/" target="_blank">BYS</a></li>
       <li><a href="https://khas.blackboard.com/webapps/login/" target="_blank">Blackboard</a></li>
       <li><a href="http://www.khas.edu.tr/e-posta.html" target="_blank">{% trans "Email" %}</a></li>
+      <li>
+        {% csrf_token %}
+            <button type="button" class="btn btn-danger">TR</button></a>
+      </li>
+      <li>
+        {% csrf_token %}
+            <button type="button" class="btn btn-primary">ENG</button></a></li>
     </ul>
   </div>
 </div>
@@ -56,8 +64,8 @@
     
 </div>
 
-    <p class="p1">{% trans "Kadir Has Campus (Cibali) Kadir Has Caddesi Cibali / İstanbul" %}</p>
-   <!-- <p class="p2"> Designed and Powered by KHAS IT Students </p> -->
+    <p class="p1">{% trans "Kadir Has Campus (Cibali) Kadir Has Caddesi Cibali / Istanbul" %}</p>
+   
    
     
     
