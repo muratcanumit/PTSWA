@@ -3,9 +3,14 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns(
+    'device.views',
+    url(r'^$', 'index', name="index"),
+    url(r'^device/search/(?P<survelliance_key>[\w{}.-]{1,40})/status/$',
+        'status',
+        name="status"),
+)
+
+urlpatterns += patterns(
     '',
-    url(r'^$', 'PTSWA.views.index'),
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
