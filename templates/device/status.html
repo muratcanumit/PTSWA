@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+
+{% block title %}{% trans "Kadir Has University" %} | Help Desk | {% trans "Device Status" %}{% endblock %}
+
+{% block device_area %}
+
+<br><br><br><br><br><br><br><br>
+ 
+  <table height="350" border="1" align="center">
+      <tr>
+         <td colspan="2" align="center">{% trans "DEVICE INFORMATION" %}</td>
+      </tr>
+      <tr>
+         <td>{% trans "Type of Device" %}</td>
+         <td>&nbsp;</td>
+      </tr>
+      <tr>
+         <td>{% trans "Brand Name" %}</td>
+         <td>&nbsp;</td>
+      </tr>
+      <tr>
+         <td>{% trans "Model Name" %}</td>
+         <td>&nbsp;</td>
+      </tr>
+      <tr>
+         <td>{% trans "Record Date" %}</td>
+         <td>&nbsp;</td>
+      </tr>
+      <tr>
+         <td>{% trans "Last Name of Device's Owner" %}</td>
+         <td>&nbsp;</td>
+      </tr>
+      <tr>
+         <td>{% trans "Current Status" %}</td>
+         <td>&nbsp;</td>
+      </tr>
+      <tr>
+         <td>{% trans "Delivery Date" %}</td>
+         <td>&nbsp;</td>
+      </tr>
+   </table>
+   <center> 
+      <a href="www.khashelpdesk.com" target="_blank">
+         <button class="btn btn-danger" type="button">{% trans "Back to Home Page" %}</button></a>
+   </center>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% load i18n %}
+{% load url from future %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+    <title>{% block title %}{% trans "Kadir Has University" %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}
+    <!-- Bootstrap -->
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    {% endblock %}
+
+  </head>
+  <body>
+
+
+  {% block body %}
+  <div class="navbar navbar-static-top navbar-custom1">
+  <div class="navbar-inner">
+    <a class="brand" >{% trans "Kadir Has University Help Desk Device Survelliance System" %}</a>
+    <ul class="nav pull-right">
+    <li><a href="http://www.khas.edu.tr/" target="_blank">{% trans "KHAS Home Page" %}</a></li>
+      <li><a href="http://bilgimerkezi.khas.edu.tr/" target="_blank">{% trans "Library" %}</a></li>
+      <li><a href="http://bys.khas.edu.tr/" target="_blank">BYS</a></li>
+      <li><a href="https://khas.blackboard.com/webapps/login/" target="_blank">Blackboard</a></li>
+      <li><a href="http://www.khas.edu.tr/e-posta.html" target="_blank">{% trans "Email" %}</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="navbar navbar-static-top navbar-custom2">
+ <div class="navbar navbar-inner  navbar-fixed-bottom">
+   
+  <div class="container">
+    <div class="btn-group">
+        <button class="btn btn-default btn-lg disabled">{% trans "Follow Us: " %}</button> 
+        
+        <a class="btn btn-default btn-lg" target="_blank" title="On Facebook" href="https://www.facebook.com/Khasedutr">
+            <i class="fa fa-facebook fa-lg fb"></i>
+        </a>
+
+        <a class="btn btn-default btn-lg" target="_blank" title="On Twitter" href="https://twitter.com/khasedutr">
+            <i class="fa fa-twitter fa-lg tw"></i>
+        </a>
+        <a class="btn btn-default btn-lg" target="_blank" title="On Google Plus" href="https://plus.google.com/110247914923273274135/posts">
+            <i class="fa fa-google-plus fa-lg google"></i>
+        </a>
+        <a class="btn btn-default btn-lg" target="_blank" title="On LinkedIn" href="http://www.linkedin.com/edu/school?id=17373&trk=edu-cp-logo">
+            <i class="fa fa-linkedin fa-lg linkin"></i>
+        </a>
+
+    </div>
+    
+</div>
+
+    <p class="p1">{% trans "Kadir Has Campus (Cibali) Kadir Has Caddesi Cibali / İstanbul" %}</p>
+   <!-- <p class="p2"> Designed and Powered by KHAS IT Students </p> -->
+   
+    
+    
+ </div>
+ {% endblock %}
+
+ {% block device_area %}{% endblock %}
+
+  </body>
+</html>

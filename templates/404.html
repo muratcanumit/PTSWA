@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+
+{% block title %}{% trans "Kadir Has University" %} | Help Desk | 404{% endblock %}
+
+{% block device_area %}
+
+<center>
+	<br><br>
+	<img src="{{ STATIC_URL }}logo.jpg" alt="" width="320" height="320">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+	<br/>  
+
+	<h1> 404 Not Found </h1>
+
+</center>
+
+{% endblock %}
