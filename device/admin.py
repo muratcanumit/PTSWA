@@ -18,10 +18,11 @@ class DeviceAdmin(admin.ModelAdmin):
         ('Delivery Date', {'fields': ['delivery_date'],
                            'classes': ['collapse']}),
     ]
-    list_display = ('survelliance_key', 'owner_name',
-                    'owner_lastname', 'record_date',
-                    'current_status', 'serial_number',
-                    'received_or_not')
+    list_display = ('survelliance_key', 'device_type',
+                    'brand_name', 'model_name',
+                    'owner_name', 'owner_lastname',
+                    'record_date', 'current_status',
+                    'serial_number')
     list_filter = ['record_date', 'current_status', 'device_type']
     search_fields = ['serial_number', 'survelliance_key',
                      'owner_name', 'owner_lastname', 'brand_name',

@@ -43,16 +43,16 @@ TIME_ZONE = 'Europe/Istanbul'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'tr'
 
 LOCALE_PATHS = os.path.join(PROJECT_DIR, 'locale/'),
 
-ugettext = lambda s: s
+# ugettext = lambda s: s
 
-LANGUAGES = (
-    ('tr', ugettext(u'Turkish')),
-    ('en', ugettext(u'English')),
-)
+# LANGUAGES = (
+#    ('tr', ugettext(u'Turkish')),
+#    ('en', ugettext(u'English')),
+# )
 
 SITE_ID = 1
 

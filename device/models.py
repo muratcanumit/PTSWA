@@ -57,7 +57,9 @@ class Device (models.Model):
                                verbose_name="KHAS ID")
 
     def received_or_not(self):
-        return self.current_status == _('Delivered')
+        if self.current_status == _('Delivered'):
+            return True
+        return False
     received_or_not.boolean = True
     received_or_not.short_description = _('Delivered?')
 
@@ -77,7 +79,8 @@ class Device (models.Model):
                        _('you can search your device status using the key ') +
                        _('or directly reach with clicking the link.') +
                        '\n\n' + 'www.khashelpdesk.com/device/search/' +
-                       self.survelliance_key + '\n\n' + _('Have a nice day.') +
+                       self.survelliance_key + '/status/\n\n' +
+                       _('Have a nice day.') +
                        '\n\n' + _('Kadir Has University Help Desk'))
 
             send_key_email(self.email, message)
@@ -92,7 +95,8 @@ class Device (models.Model):
                        _('you can search your device status using the key ') +
                        _('or directly reach with clicking the link.') +
                        '\n\n' + 'www.khashelpdesk.com/device/search/' +
-                       self.survelliance_key + '\n\n' + _('Have a nice day.') +
+                       self.survelliance_key + '/status/\n\n' +
+                       _('Have a nice day.') +
                        '\n\n' + _('Kadir Has University Help Desk'))
 
             send_key_email(self.email, message)

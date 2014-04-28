@@ -167,7 +167,7 @@ msgstr "Bizi Takip Edin: "
 #: templates/base.html:59
 #, fuzzy
 msgid "Kadir Has Campus (Cibali) Kadir Has Caddesi Cibali / Istanbul"
-msgstr "Kadir Has Kampüsü (Cibali) Kadir Has Caddesi Cibali / İstanbul"
+msgstr "Kadir Has Üniversitesi Kampüsü (Cibali) Kadir Has Caddesi Cibali / İstanbul"
 
 #: templates/device/index.html:19
 msgid "Search"

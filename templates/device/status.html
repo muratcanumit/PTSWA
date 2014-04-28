@@ -6,43 +6,45 @@
 
 {% block device_area %}
 
-<br><br><br><br><br><br><br><br>
- 
+<br/><br/><br/><br/>
+{% if req_device %}
   <table height="350" border="1" align="center">
       <tr>
          <td colspan="2" align="center">{% trans "DEVICE INFORMATION" %}</td>
       </tr>
       <tr>
          <td>{% trans "Type of Device" %}</td>
-         <td>&nbsp;</td>
+         <td>{{ req_device.device_type }}</td>
       </tr>
       <tr>
          <td>{% trans "Brand Name" %}</td>
-         <td>&nbsp;</td>
+         <td>{{ req_device.brand_name }}</td>
       </tr>
       <tr>
          <td>{% trans "Model Name" %}</td>
-         <td>&nbsp;</td>
+         <td>{{ req_device.model_name }}</td>
       </tr>
       <tr>
          <td>{% trans "Record Date" %}</td>
-         <td>&nbsp;</td>
+         <td>{{ req_device.record_date }}</td>
       </tr>
       <tr>
          <td>{% trans "Last Name of Device's Owner" %}</td>
-         <td>&nbsp;</td>
+         <td>{{ req_device.lastname }}</td>
       </tr>
       <tr>
          <td>{% trans "Current Status" %}</td>
-         <td>&nbsp;</td>
+         <td>{{ req_device.current_status }}</td>
       </tr>
       <tr>
          <td>{% trans "Delivery Date" %}</td>
-         <td>&nbsp;</td>
+         <td>{{ req_device.delivery_date }}</td>
       </tr>
    </table>
+   
    <center> 
       <a href="http://www.khashelpdesk.com">
          <button class="btn btn-danger" type="button">{% trans "Back to Home Page" %}</button></a>
    </center>
+{% endif %}
 {% endblock %}

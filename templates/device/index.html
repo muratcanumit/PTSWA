@@ -8,15 +8,26 @@
 
 <center>
     <br><br>
-    <img src="{{ STATIC_URL }}logo.jpg" alt="" width="320" height="320">
+    <img src="{{ STATIC_URL }}logo.jpg" alt="Khas Logo" width="320" height="320">
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
     <br/>  
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form class="form-search" action="/device/status/" method="post">
+        {% csrf_token %}
+        <br/><br/>
+        <input type="text" class="input-xxlarge search-query">
+            <button class="btn" type="submit">{% trans "Search" %}</button>
 
-<form class="form-search" action=""> 
-  <br><br>
-  <input type="text" class="input-xxlarge search-query">
-    <button class="btn" type="button">{% trans "Search" %}</button>
+    </form>
 </center>
 
 {% endblock %}
+
+<!-- <a href="{% url 'status' device.survelliance_key %}"> -->
