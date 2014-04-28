@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-25 21:20+0300\n"
+"POT-Creation-Date: 2014-04-28 15:06+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
+#: PTSWA/settings.py:53
+msgid "Turkish"
+msgstr "Türkçe"
+
+#: PTSWA/settings.py:54
+msgid "English"
+msgstr "İngilizce"
+
+#: device/forms.py:7
+msgid "Survelliance Key"
+msgstr "Takip Anahtarı"
+
+#: device/forms.py:9
+msgid "Enter Valid Key"
+msgstr "Geçerli Bir Anahtar Giriniz"
+
 #: device/models.py:11
 msgid "Record Key of Device"
-msgstr "Cihaz Takip Anahtarı"
+msgstr "Cihazın Takip Anahtarı"
 
 #: device/models.py:15 templates/device/status.html:16
 msgid "Type of Device"
@@ -52,7 +68,7 @@ msgstr "Kayıt Tarihi"
 
 #: device/models.py:41 templates/device/status.html:40
 msgid "Delivery Date"
-msgstr "Teslim Tarihi"
+msgstr "Teslimat Tarihi"
 
 #: device/models.py:44
 msgid "Name of Device Owner"
@@ -68,43 +84,39 @@ msgstr "Telefon Numarası"
 
 #: device/models.py:53
 msgid "Email Address"
-msgstr "E-mail Adresi"
+msgstr "Email Adresi"
 
 #: device/models.py:60 libs/choices.py:7
 msgid "Delivered"
 msgstr "Teslim Edildi"
 
-#: device/models.py:62
+#: device/models.py:64
 msgid "Delivered?"
-msgstr "Teslim Edildi mi ?"
+msgstr "Teslim Edildi mi?"
 
-#: device/models.py:72
+#: device/models.py:74
 msgid "Survelliance key of your device "
 msgstr "Help Desk'e bıraktığınız cihazınızın "
 
-#: device/models.py:73
+#: device/models.py:75
 msgid "that you left at help desk is : "
 msgstr "takip anahtarı : "
 
-#: device/models.py:76 device/models.py:91
+#: device/models.py:78 device/models.py:91
 msgid "From the address that www.khashelpdesk.com ,"
 msgstr "www.khashelpdesk.com adresinden ,"
 
-#: device/models.py:77 device/models.py:92
-msgid "you can search your device status using the key "
-msgstr "takip anahtarınızla arama yaparak "
+#: device/models.py:79 device/models.py:92
+msgid "you can search your device status using the key. "
+msgstr "takip anahtarınız ile arama yaparak cihazınızın durumunu öğrenebilirsiniz. "
 
-#: device/models.py:78 device/models.py:93
-msgid "or directly reach with clicking the link."
-msgstr "ya da linke tıklayarak cihazınızın durumunu öğrenebilirsiniz."
-
-#: device/models.py:80 device/models.py:95
+#: device/models.py:80 device/models.py:93
 msgid "Have a nice day."
-msgstr "İyi günler."
+msgstr "İyi Günler. "
 
-#: device/models.py:81 device/models.py:96
+#: device/models.py:81 device/models.py:94
 msgid "Kadir Has University Help Desk"
-msgstr "Kadir Has Üniversitesi Help Desk Birimi"
+msgstr "Kadir Has Üniversitesi Help Desk"
 
 #: device/models.py:86
 msgid "Progress of your device is completed."
@@ -113,6 +125,10 @@ msgstr "Cihazınızın işlemi tamamlanmıştır."
 #: device/models.py:88
 msgid "Survelliance key of your device is : "
 msgstr "Cihazınızın takip anahtarı : "
+
+#: device/views.py:26
+msgid "Invalid Survelliance Key : Device does not Exist!"
+msgstr "Geçersiz Anahtar : Böyle Bir Cihaz Yok !"
 
 #: libs/choices.py:5
 msgid "at Technical Service"
@@ -139,37 +155,36 @@ msgstr "DİĞER CİHAZ"
 msgid "Other Device"
 msgstr "Diğer Cihaz"
 
-#: templates/404.html:5 templates/500.html:5 templates/base.html:7
+#: templates/404.html:5 templates/500.html:4 templates/base.html:7
 #: templates/device/index.html:5 templates/device/status.html:5
 msgid "Kadir Has University"
 msgstr "Kadir Has Üniversitesi"
 
-#: templates/base.html:23
+#: templates/base.html:24
 msgid "Kadir Has University Help Desk Device Survelliance System"
-msgstr "Kadir Has Üniversitesi Help Desk Cihaz Takip Sistemi"
-
-#: templates/base.html:25
-msgid "KHAS Home Page"
-msgstr "KHAS Anasayfa"
+msgstr "Kadir Has Üniversitesi Cihaz Takip Sistemi"
 
 #: templates/base.html:26
+msgid "KHAS Home Page"
+msgstr "KHAS Ana Sayfa"
+
+#: templates/base.html:27
 msgid "Library"
 msgstr "Bilgi Merkezi"
 
-#: templates/base.html:29
+#: templates/base.html:30
 msgid "Email"
-msgstr "E-mail"
+msgstr "E-posta"
 
-#: templates/base.html:39
+#: templates/base.html:40
 msgid "Follow Us: "
 msgstr "Bizi Takip Edin: "
 
-#: templates/base.html:59
-#, fuzzy
+#: templates/base.html:60
 msgid "Kadir Has Campus (Cibali) Kadir Has Caddesi Cibali / Istanbul"
-msgstr "Kadir Has Üniversitesi Kampüsü (Cibali) Kadir Has Caddesi Cibali / İstanbul"
+msgstr "Kadir Has Kampüsü (Cibali) Kadir Has Caddesi Cibali / İstanbul"
 
-#: templates/device/index.html:19
+#: templates/device/index.html:26
 msgid "Search"
 msgstr "Ara"
 
@@ -191,8 +206,8 @@ msgstr "Cihaz Sahibinin Soyadı"
 
 #: templates/device/status.html:36
 msgid "Current Status"
-msgstr "Cihazın Şu Anki Durumu"
+msgstr "Cihazın Durumu"
 
-#: templates/device/status.html:46
+#: templates/device/status.html:47
 msgid "Back to Home Page"
-msgstr "Anasayfaya Geri Dön"
+msgstr "Anasayfaya Dön"

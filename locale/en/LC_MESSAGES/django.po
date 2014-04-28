@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-25 21:41+0300\n"
+"POT-Creation-Date: 2014-04-28 15:23+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,22 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: PTSWA/settings.py:53
+msgid "Turkish"
+msgstr "Turkish"
+
+#: PTSWA/settings.py:54
+msgid "English"
+msgstr "English"
+
+#: device/forms.py:7
+msgid "Survelliance Key"
+msgstr "Survelliance Key"
+
+#: device/forms.py:9
+msgid "Enter Valid Key"
+msgstr "Enter Valid Key"
 
 #: device/models.py:11
 msgid "Record Key of Device"
@@ -73,35 +89,31 @@ msgstr "Email Address"
 msgid "Delivered"
 msgstr "Delivered"
 
-#: device/models.py:62
+#: device/models.py:64
 msgid "Delivered?"
 msgstr "Delivered?"
 
-#: device/models.py:72
+#: device/models.py:74
 msgid "Survelliance key of your device "
 msgstr "Survelliance key of your device "
 
-#: device/models.py:73
+#: device/models.py:75
 msgid "that you left at help desk is : "
 msgstr "that you left at help desk is : "
 
-#: device/models.py:76 device/models.py:91
+#: device/models.py:78 device/models.py:91
 msgid "From the address that www.khashelpdesk.com ,"
 msgstr "From the address that www.khashelpdesk.com ,"
 
-#: device/models.py:77 device/models.py:92
-msgid "you can search your device status using the key "
-msgstr "you can search your device status using the key "
+#: device/models.py:79 device/models.py:92
+msgid "you can search your device status using the key. "
+msgstr "you can search your device status using the key. "
 
-#: device/models.py:78 device/models.py:93
-msgid "or directly reach with clicking the link."
-msgstr "or directly reach with clicking the link."
-
-#: device/models.py:80 device/models.py:95
+#: device/models.py:80 device/models.py:93
 msgid "Have a nice day."
 msgstr "Have a nice day."
 
-#: device/models.py:81 device/models.py:96
+#: device/models.py:81 device/models.py:94
 msgid "Kadir Has University Help Desk"
 msgstr "Kadir Has University Help Desk"
 
@@ -112,6 +124,10 @@ msgstr "Progress of your device is completed."
 #: device/models.py:88
 msgid "Survelliance key of your device is : "
 msgstr "Survelliance key of your device is : "
+
+#: device/views.py:26
+msgid "Invalid Survelliance Key : Device does not Exist!"
+msgstr "Invalid Survelliance Key : Device does not Exist!"
 
 #: libs/choices.py:5
 msgid "at Technical Service"
@@ -138,36 +154,36 @@ msgstr "OTHER DEVICE"
 msgid "Other Device"
 msgstr "Other Device"
 
-#: templates/404.html:5 templates/500.html:5 templates/base.html:7
+#: templates/404.html:5 templates/500.html:4 templates/base.html:7
 #: templates/device/index.html:5 templates/device/status.html:5
 msgid "Kadir Has University"
 msgstr "Kadir Has University"
 
-#: templates/base.html:23
+#: templates/base.html:24
 msgid "Kadir Has University Help Desk Device Survelliance System"
 msgstr "Kadir Has University Help Desk Device Survelliance System"
 
-#: templates/base.html:25
+#: templates/base.html:26
 msgid "KHAS Home Page"
 msgstr "KHAS Home Page"
 
-#: templates/base.html:26
+#: templates/base.html:27
 msgid "Library"
 msgstr "Library"
 
-#: templates/base.html:29
+#: templates/base.html:30
 msgid "Email"
 msgstr "Email"
 
-#: templates/base.html:39
+#: templates/base.html:40
 msgid "Follow Us: "
 msgstr "Follow Us: "
 
-#: templates/base.html:59
+#: templates/base.html:60
 msgid "Kadir Has Campus (Cibali) Kadir Has Caddesi Cibali / Istanbul"
 msgstr "Kadir Has Campus (Cibali) Kadir Has Caddesi Cibali / Istanbul"
 
-#: templates/device/index.html:19
+#: templates/device/index.html:26
 msgid "Search"
 msgstr "Search"
 
@@ -191,6 +207,6 @@ msgstr "Last Name of Device's Owner"
 msgid "Current Status"
 msgstr "Current Status"
 
-#: templates/device/status.html:46
+#: templates/device/status.html:47
 msgid "Back to Home Page"
 msgstr "Back to Home Page"

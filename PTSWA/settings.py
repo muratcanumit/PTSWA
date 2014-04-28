@@ -47,12 +47,12 @@ LANGUAGE_CODE = 'tr'
 
 LOCALE_PATHS = os.path.join(PROJECT_DIR, 'locale/'),
 
-# ugettext = lambda s: s
+ugettext = lambda s: s
 
-# LANGUAGES = (
-#    ('tr', ugettext(u'Turkish')),
-#    ('en', ugettext(u'English')),
-# )
+LANGUAGES = (
+    ('tr', ugettext(u'Turkish')),
+    ('en', ugettext(u'English')),
+)
 
 SITE_ID = 1
 
