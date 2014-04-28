@@ -97,9 +97,22 @@ class Device (models.Model):
 
         super(Device, self).save(*args, **kwargs)
 
+    def __unicode__(self):
+        return "%s" % (self.survelliance_key)
 
-class Meta:
+    class Meta:
+        verbose_name = _('Device')
+        verbose_name_plural = _('Devices')
         ordering = ['-record_date']
-# _('or directly reach with clicking the link.') +
-#                       '\n\n' + 'www.khashelpdesk.com/device/search/' +
-#                       self.survelliance_key + '/status/\n\n' +
+
+
+class SearchHistory(models.Model):
+    survelliance_key = models.CharField(max_length=25,
+                                        verbose_name=_('Record Key of Device'))
+
+    def __unicode__(self):
+        return "%s" % (self.survelliance_key)
+
+    class Meta:
+        verbose_name = _('Search History')
+        verbose_name_plural = _('Search Histories')

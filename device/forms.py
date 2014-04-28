@@ -1,9 +1,7 @@
-from django import forms
-from django.utils.translation import ugettext as _
+from django.forms import ModelForm
+from device.models import SearchHistory
 
 
-class SearchForm(forms.Form):
-    survelliance_key = forms.CharField(required=True,
-                                       label=_('Survelliance Key'),
-                                       error_messages={
-                                       'required': _("Enter Valid Key")})
+class SearchHistoryForm(ModelForm):
+    class Meta:
+        model = SearchHistory
