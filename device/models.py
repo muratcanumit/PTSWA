@@ -66,7 +66,7 @@ class Device (models.Model):
     def save(self, *args, **kwargs):
         if not self.id:
             while True:
-                survelliance_key = str(uuid.uuid1())[:25]
+                survelliance_key = str(uuid.uuid1())[:8]
                 if len(Device.objects.filter(survelliance_key=survelliance_key)) == 0:
                     self.survelliance_key = survelliance_key
                     break
@@ -107,8 +107,7 @@ class Device (models.Model):
 
 
 class SearchHistory(models.Model):
-    survelliance_key = models.CharField(max_length=25,
-                                        verbose_name=_('Record Key of Device'))
+    survelliance_key = models.ForeignKey('Device', to_field='survelliance_key')
 
     def __unicode__(self):
         return "%s" % (self.survelliance_key)

@@ -5,12 +5,23 @@ from django.shortcuts import render_to_response, get_object_or_404, render
 from django.template import RequestContext
 from device.models import Device
 from device.forms import SearchHistoryForm
-from django.contrib import messages
-from django.utils.translation import ugettext as _
+from django.http import HttpResponse
+from django.template import loader, Context
+from django.views.generic import list_detail
 
 
 def index(request):
         return render(request, 'device/index.html')
+
+"""
+ def status(request):
+    survelliance_key = request.POST.get('survelliance_key')
+    results = get_object_or_404(Device, survelliance_key=survelliance_key)
+    template = loader.get_template()
+    context = Context({'survelliance_key': survelliance_key, 'results': results})
+    response = template.render(context)
+    return HttpResponse(response)
+"""
 
 
 def status(request):
@@ -22,16 +33,16 @@ def status(request):
         c.update(locals())
         if form.is_valid():
             survelliance_key = request.POST.get('survelliance_key')
-            req_device = get_object_or_404(Device,
+            device = get_object_or_404(Device,
                                            survelliance_key=survelliance_key)
-            return HttpResponseRedirect('/device/status/')
+            return render_to_response('device/status.html',
+                                      {'device': device})
         else:
             return HttpResponseRedirect('/')
     else:
         form = SearchHistoryForm()
         c.update(locals())
         return HttpResponseRedirect('/')
-
 
 """
 def status(request):
@@ -56,4 +67,8 @@ def status(request):
     else:
         form = SearchForm()
         return redirect('/')
+
+        else:
+            return HttpResponseRedirect('/')
+
 """

@@ -162,7 +162,7 @@ msgstr "Kadir Has Üniversitesi"
 
 #: templates/base.html:24
 msgid "Kadir Has University Help Desk Device Survelliance System"
-msgstr "Kadir Has Üniversitesi Cihaz Takip Sistemi"
+msgstr "Kadir Has Üniversitesi | Help Desk Cihaz Takip Sistemi"
 
 #: templates/base.html:26
 msgid "KHAS Home Page"

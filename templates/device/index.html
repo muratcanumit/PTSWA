@@ -22,6 +22,7 @@
     <form class="form-search" action="/device/status/" method="post">
         {% csrf_token %}
         <br/><br/>
+        {{SearchHistoryForm}}
         <input type="text" class="input-xxlarge search-query">
             <button class="btn" type="submit">{% trans "Search" %}</button>
 

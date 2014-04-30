@@ -7,38 +7,38 @@
 {% block device_area %}
 
 <br/><br/><br/><br/>
-{% if req_device %}
+{% if device %}
   <table height="350" border="1" align="center">
       <tr>
          <td colspan="2" align="center">{% trans "DEVICE INFORMATION" %}</td>
       </tr>
       <tr>
          <td>{% trans "Type of Device" %}</td>
-         <td>{{ req_device.device_type }}</td>
+         <td>{{ device.device_type }}</td>
       </tr>
       <tr>
          <td>{% trans "Brand Name" %}</td>
-         <td>{{ req_device.brand_name }}</td>
+         <td>{{ device.brand_name }}</td>
       </tr>
       <tr>
          <td>{% trans "Model Name" %}</td>
-         <td>{{ req_device.model_name }}</td>
+         <td>{{ device.model_name }}</td>
       </tr>
       <tr>
          <td>{% trans "Record Date" %}</td>
-         <td>{{ req_device.record_date }}</td>
+         <td>{{ device.record_date }}</td>
       </tr>
       <tr>
          <td>{% trans "Last Name of Device's Owner" %}</td>
-         <td>{{ req_device.lastname }}</td>
+         <td>{{ device.lastname }}</td>
       </tr>
       <tr>
          <td>{% trans "Current Status" %}</td>
-         <td>{{ req_device.current_status }}</td>
+         <td>{{ device.current_status }}</td>
       </tr>
       <tr>
          <td>{% trans "Delivery Date" %}</td>
-         <td>{{ req_device.delivery_date }}</td>
+         <td>{{ device.delivery_date }}</td>
       </tr>
    </table>
    
