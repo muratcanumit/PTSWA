@@ -1,5 +1,4 @@
 KADIR HAS UNIVERSITY HELP DESK DEVICE SURVEILLANCE SYSTEM
-( Product Technical Survelliance Web Application )
 ---------------------------------------------------------------------------------
 
 
