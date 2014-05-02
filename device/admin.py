@@ -29,11 +29,3 @@ class DeviceAdmin(admin.ModelAdmin):
                      'model_name']
 
 admin.site.register(Device, DeviceAdmin)
-
-
-class SearchHistoryAdmin(admin.ModelAdmin):
-    fieldsets = [
-        (None,           {'fields': ['survelliance_key']}),
-    ]
-
-admin.site.register(SearchHistory, SearchHistoryAdmin)

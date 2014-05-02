@@ -76,6 +76,10 @@ class Device (models.Model):
                        self.survelliance_key +
                        '\n\n' +
                        _('From the address that www.khashelpdesk.com ,') +
+                       _('you can search your device status using the key ') +
+                       _('or directly reach with clicking the link.') +
+                       '\n\n' + 'www.khashelpdesk.com/device/' +
+                       self.survelliance_key + '/status/\n\n' +
                        _('you can search your device status using the key. ') +
                        _('Have a nice day.') +
                        '\n\n' + _('Kadir Has University Help Desk'))
@@ -89,6 +93,10 @@ class Device (models.Model):
                        self.survelliance_key +
                        '\n\n' +
                        _('From the address that www.khashelpdesk.com ,') +
+                       _('you can search your device status using the key ') +
+                       _('or directly reach with clicking the link.') +
+                       '\n\n' + 'www.khashelpdesk.com/device/' +
+                       self.survelliance_key + '/status/\n\n' +
                        _('you can search your device status using the key. ') +
                        _('Have a nice day.') +
                        '\n\n' + _('Kadir Has University Help Desk'))

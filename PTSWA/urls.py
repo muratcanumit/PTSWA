@@ -7,12 +7,11 @@ admin.autodiscover()
 urlpatterns = patterns(
     'device.views',
     url(r'^$', 'index', name="index"),
-    url(r'^device/status/$',
+    url(r'^device/(?P<survelliance_key>[-A-Za-z0-9_]+)/status/$',
         'status',
         name="status"),
 )
-#[\w{}.-]{1,40}    -------    [^/]+          [-\w\d]+       [a-z0-9]+
-# (?P<survelliance_key>[-\w]+)/
+
 if settings.DEBUG is True:
     urlpatterns = patterns(
         '',

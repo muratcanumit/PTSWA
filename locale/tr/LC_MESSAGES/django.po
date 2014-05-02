@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-28 15:06+0300\n"
+"POT-Creation-Date: 2014-05-02 03:24+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,14 +25,6 @@ msgstr "Türkçe"
 #: PTSWA/settings.py:54
 msgid "English"
 msgstr "İngilizce"
-
-#: device/forms.py:7
-msgid "Survelliance Key"
-msgstr "Takip Anahtarı"
-
-#: device/forms.py:9
-msgid "Enter Valid Key"
-msgstr "Geçerli Bir Anahtar Giriniz"
 
 #: device/models.py:11
 msgid "Record Key of Device"
@@ -102,33 +94,57 @@ msgstr "Help Desk'e bıraktığınız cihazınızın "
 msgid "that you left at help desk is : "
 msgstr "takip anahtarı : "
 
-#: device/models.py:78 device/models.py:91
+#: device/models.py:78 device/models.py:95
 msgid "From the address that www.khashelpdesk.com ,"
 msgstr "www.khashelpdesk.com adresinden ,"
 
-#: device/models.py:79 device/models.py:92
+#: device/models.py:79 device/models.py:96
+#, fuzzy
+msgid "you can search your device status using the key "
+msgstr "takip anahtarınız ile arama yaparak cihazınızın durumunu öğrenebilirsiniz. "
+
+#: device/models.py:80 device/models.py:97
+msgid "or directly reach with clicking the link."
+msgstr ""
+
+#: device/models.py:83 device/models.py:100
 msgid "you can search your device status using the key. "
 msgstr "takip anahtarınız ile arama yaparak cihazınızın durumunu öğrenebilirsiniz. "
 
-#: device/models.py:80 device/models.py:93
+#: device/models.py:84 device/models.py:101
 msgid "Have a nice day."
 msgstr "İyi Günler. "
 
-#: device/models.py:81 device/models.py:94
+#: device/models.py:85 device/models.py:102
 msgid "Kadir Has University Help Desk"
 msgstr "Kadir Has Üniversitesi Help Desk"
 
-#: device/models.py:86
+#: device/models.py:90
 msgid "Progress of your device is completed."
 msgstr "Cihazınızın işlemi tamamlanmıştır."
 
-#: device/models.py:88
+#: device/models.py:92
 msgid "Survelliance key of your device is : "
 msgstr "Cihazınızın takip anahtarı : "
 
-#: device/views.py:26
-msgid "Invalid Survelliance Key : Device does not Exist!"
-msgstr "Geçersiz Anahtar : Böyle Bir Cihaz Yok !"
+#: device/models.py:112
+#, fuzzy
+msgid "Device"
+msgstr "Diğer Cihaz"
+
+#: device/models.py:113
+#, fuzzy
+msgid "Devices"
+msgstr "Cihazın Durumu"
+
+#: device/models.py:124
+#, fuzzy
+msgid "Search History"
+msgstr "Ara"
+
+#: device/models.py:125
+msgid "Search Histories"
+msgstr ""
 
 #: libs/choices.py:5
 msgid "at Technical Service"
@@ -184,7 +200,7 @@ msgstr "Bizi Takip Edin: "
 msgid "Kadir Has Campus (Cibali) Kadir Has Caddesi Cibali / Istanbul"
 msgstr "Kadir Has Kampüsü (Cibali) Kadir Has Caddesi Cibali / İstanbul"
 
-#: templates/device/index.html:26
+#: templates/device/index.html:27
 msgid "Search"
 msgstr "Ara"
 
@@ -211,3 +227,12 @@ msgstr "Cihazın Durumu"
 #: templates/device/status.html:47
 msgid "Back to Home Page"
 msgstr "Anasayfaya Dön"
+
+#~ msgid "Survelliance Key"
+#~ msgstr "Takip Anahtarı"
+
+#~ msgid "Enter Valid Key"
+#~ msgstr "Geçerli Bir Anahtar Giriniz"
+
+#~ msgid "Invalid Survelliance Key : Device does not Exist!"
+#~ msgstr "Geçersiz Anahtar : Böyle Bir Cihaz Yok !"

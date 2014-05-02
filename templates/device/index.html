@@ -19,7 +19,7 @@
             {% endfor %}
         </ul>
     {% endif %}
-    <form class="form-search" action="/device/status/" method="post">
+    <form class="form-search" action="/device/{{ device.surveillance_key }}/status/" method="post">
         {% csrf_token %}
         <br/><br/>
         {{SearchHistoryForm}}
