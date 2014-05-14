@@ -1,7 +1,5 @@
-from django.forms import ModelForm
-from device.models import SearchHistory
+from django import forms
 
 
-class SearchHistoryForm(ModelForm):
-    class Meta:
-        model = SearchHistory
+class SearchForm(forms.Form):
+    survelliance_key = forms.CharField(max_length=25)

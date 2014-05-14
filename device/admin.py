@@ -1,4 +1,4 @@
-from device.models import Device, SearchHistory
+from device.models import Device
 from django.contrib import admin
 
 

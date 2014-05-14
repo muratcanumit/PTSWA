@@ -12,23 +12,19 @@
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
     <br/>  
-    {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
+    
+    {% if error %}
+        <p style="color: red;">{% trans "Please Enter a Valid Search Key" %}</p>
     {% endif %}
-    <form class="form-search" action="/device/{{ device.surveillance_key }}/status/" method="post">
-        {% csrf_token %}
-        <br/><br/>
-        {{SearchHistoryForm}}
-        <input type="text" class="input-xxlarge search-query">
-            <button class="btn" type="submit">{% trans "Search" %}</button>
+
+        <form class="form-search" action="device/status/" method="get">
+         <br/><br/>
+        {{SearchForm}}
+        <input type="text" class="input-xxlarge search-query" name="q">
+            <button class="btn" type="submit" value="Search">{% trans "Search" %}</button>
 
     </form>
 </center>
 
 {% endblock %}
 
-<!-- <a href="{% url 'status' device.survelliance_key %}"> -->

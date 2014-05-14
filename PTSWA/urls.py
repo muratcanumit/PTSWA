@@ -4,10 +4,11 @@ from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 admin.autodiscover()
 
+
 urlpatterns = patterns(
     'device.views',
     url(r'^$', 'index', name="index"),
-    url(r'^device/(?P<survelliance_key>[-A-Za-z0-9_]+)/status/$',
+    url(r'^device/status/$',
         'status',
         name="status"),
 )

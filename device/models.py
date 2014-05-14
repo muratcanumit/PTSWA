@@ -78,9 +78,11 @@ class Device (models.Model):
                        _('From the address that www.khashelpdesk.com ,') +
                        _('you can search your device status using the key ') +
                        _('or directly reach with clicking the link.') +
-                       '\n\n' + 'www.khashelpdesk.com/device/' +
-                       self.survelliance_key + '/status/\n\n' +
+                       '\n\n' + '127.0.0.1:8000/device/status/?q=' +
+                       self.survelliance_key +
+                       '\n\n' +
                        _('you can search your device status using the key. ') +
+                       '\n\n' +
                        _('Have a nice day.') +
                        '\n\n' + _('Kadir Has University Help Desk'))
 
@@ -89,15 +91,16 @@ class Device (models.Model):
         else:
             message = (_('Progress of your device is completed.') +
                        '\n\n' +
-                       _('Survelliance key of your device is : ') +
+                       _('Survelliance key of your device ') +
+                       _('that you left at help desk is : ') +
                        self.survelliance_key +
                        '\n\n' +
                        _('From the address that www.khashelpdesk.com ,') +
-                       _('you can search your device status using the key ') +
                        _('or directly reach with clicking the link.') +
-                       '\n\n' + 'www.khashelpdesk.com/device/' +
-                       self.survelliance_key + '/status/\n\n' +
                        _('you can search your device status using the key. ') +
+                       '\n\n' + '127.0.0.1:8000/device/status/?q=' +
+                       self.survelliance_key +
+                       '\n\n' +
                        _('Have a nice day.') +
                        '\n\n' + _('Kadir Has University Help Desk'))
 
@@ -112,14 +115,3 @@ class Device (models.Model):
         verbose_name = _('Device')
         verbose_name_plural = _('Devices')
         ordering = ['-record_date']
-
-
-class SearchHistory(models.Model):
-    survelliance_key = models.ForeignKey('Device', to_field='survelliance_key')
-
-    def __unicode__(self):
-        return "%s" % (self.survelliance_key)
-
-    class Meta:
-        verbose_name = _('Search History')
-        verbose_name_plural = _('Search Histories')

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-02 03:24+0300\n"
+"POT-Creation-Date: 2014-05-14 03:41+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,9 +30,9 @@ msgstr "İngilizce"
 msgid "Record Key of Device"
 msgstr "Cihazın Takip Anahtarı"
 
-#: device/models.py:15 templates/device/status.html:16
+#: device/models.py:15 templates/device/status.html:17
 msgid "Type of Device"
-msgstr "Cihazın Tipi"
+msgstr "Cihaz Tipi"
 
 #: device/models.py:19
 msgid "Serial Number"
@@ -54,13 +54,13 @@ msgstr "Cihazın Sorunu"
 msgid "Device Status"
 msgstr "Cihazın Durumu"
 
-#: device/models.py:38 templates/device/status.html:28
+#: device/models.py:38 templates/device/status.html:29
 msgid "Record Date"
 msgstr "Kayıt Tarihi"
 
-#: device/models.py:41 templates/device/status.html:40
+#: device/models.py:41 templates/device/status.html:41
 msgid "Delivery Date"
-msgstr "Teslimat Tarihi"
+msgstr "Teslim Tarihi"
 
 #: device/models.py:44
 msgid "Name of Device Owner"
@@ -76,7 +76,7 @@ msgstr "Telefon Numarası"
 
 #: device/models.py:53
 msgid "Email Address"
-msgstr "Email Adresi"
+msgstr "E-Posta Adresi"
 
 #: device/models.py:60 libs/choices.py:7
 msgid "Delivered"
@@ -86,65 +86,49 @@ msgstr "Teslim Edildi"
 msgid "Delivered?"
 msgstr "Teslim Edildi mi?"
 
-#: device/models.py:74
+#: device/models.py:74 device/models.py:92
 msgid "Survelliance key of your device "
 msgstr "Help Desk'e bıraktığınız cihazınızın "
 
-#: device/models.py:75
+#: device/models.py:75 device/models.py:93
 msgid "that you left at help desk is : "
 msgstr "takip anahtarı : "
 
-#: device/models.py:78 device/models.py:95
+#: device/models.py:78 device/models.py:96
 msgid "From the address that www.khashelpdesk.com ,"
-msgstr "www.khashelpdesk.com adresinden ,"
+msgstr "www.khashelpdesk.com adresinden "
 
-#: device/models.py:79 device/models.py:96
-#, fuzzy
+#: device/models.py:79 device/models.py:97
 msgid "you can search your device status using the key "
-msgstr "takip anahtarınız ile arama yaparak cihazınızın durumunu öğrenebilirsiniz. "
+msgstr "takip anahtarınızla arama yapabilir "
 
-#: device/models.py:80 device/models.py:97
+#: device/models.py:80 device/models.py:98
 msgid "or directly reach with clicking the link."
-msgstr ""
+msgstr "ya da linke tıklayarak "
 
-#: device/models.py:83 device/models.py:100
+#: device/models.py:83 device/models.py:101
 msgid "you can search your device status using the key. "
-msgstr "takip anahtarınız ile arama yaparak cihazınızın durumunu öğrenebilirsiniz. "
+msgstr " cihazınızın durumunu görüntüleyebilirsiniz. "
 
-#: device/models.py:84 device/models.py:101
+#: device/models.py:84 device/models.py:102
 msgid "Have a nice day."
-msgstr "İyi Günler. "
+msgstr "İyi Günler."
 
-#: device/models.py:85 device/models.py:102
+#: device/models.py:85 device/models.py:103
 msgid "Kadir Has University Help Desk"
 msgstr "Kadir Has Üniversitesi Help Desk"
 
 #: device/models.py:90
 msgid "Progress of your device is completed."
-msgstr "Cihazınızın işlemi tamamlanmıştır."
-
-#: device/models.py:92
-msgid "Survelliance key of your device is : "
-msgstr "Cihazınızın takip anahtarı : "
-
-#: device/models.py:112
-#, fuzzy
-msgid "Device"
-msgstr "Diğer Cihaz"
+msgstr "Cihazının işlemi tamamlanmıştır."
 
 #: device/models.py:113
-#, fuzzy
+msgid "Device"
+msgstr "Cihaz"
+
+#: device/models.py:114
 msgid "Devices"
-msgstr "Cihazın Durumu"
-
-#: device/models.py:124
-#, fuzzy
-msgid "Search History"
-msgstr "Ara"
-
-#: device/models.py:125
-msgid "Search Histories"
-msgstr ""
+msgstr "Cihazlar"
 
 #: libs/choices.py:5
 msgid "at Technical Service"
@@ -178,7 +162,7 @@ msgstr "Kadir Has Üniversitesi"
 
 #: templates/base.html:24
 msgid "Kadir Has University Help Desk Device Survelliance System"
-msgstr "Kadir Has Üniversitesi | Help Desk Cihaz Takip Sistemi"
+msgstr "Kadir Has Üniversitesi Help Desk Cihaz Takip Sistemi"
 
 #: templates/base.html:26
 msgid "KHAS Home Page"
@@ -190,7 +174,7 @@ msgstr "Bilgi Merkezi"
 
 #: templates/base.html:30
 msgid "Email"
-msgstr "E-posta"
+msgstr "E-Posta"
 
 #: templates/base.html:40
 msgid "Follow Us: "
@@ -200,39 +184,34 @@ msgstr "Bizi Takip Edin: "
 msgid "Kadir Has Campus (Cibali) Kadir Has Caddesi Cibali / Istanbul"
 msgstr "Kadir Has Kampüsü (Cibali) Kadir Has Caddesi Cibali / İstanbul"
 
-#: templates/device/index.html:27
+#: templates/device/index.html:17
+msgid "Please Enter a Valid Search Key"
+msgstr "Lütfen Geçerli Bir Takip Anahtarı Giriniz"
+
+#: templates/device/index.html:24
 msgid "Search"
 msgstr "Ara"
 
-#: templates/device/status.html:13
+#: templates/device/status.html:14
 msgid "DEVICE INFORMATION"
 msgstr "CİHAZ BİLGİSİ"
 
-#: templates/device/status.html:20
+#: templates/device/status.html:21
 msgid "Brand Name"
-msgstr "Marka Adı"
+msgstr "Marka Adı : "
 
-#: templates/device/status.html:24
+#: templates/device/status.html:25
 msgid "Model Name"
-msgstr "Model Adı"
+msgstr "Model Adı : "
 
-#: templates/device/status.html:32
+#: templates/device/status.html:33
 msgid "Last Name of Device's Owner"
-msgstr "Cihaz Sahibinin Soyadı"
+msgstr "Cihaz Sahibinin Soyadı : "
 
-#: templates/device/status.html:36
+#: templates/device/status.html:37
 msgid "Current Status"
-msgstr "Cihazın Durumu"
+msgstr "Cihazın Durumu : "
 
-#: templates/device/status.html:47
+#: templates/device/status.html:49
 msgid "Back to Home Page"
-msgstr "Anasayfaya Dön"
-
-#~ msgid "Survelliance Key"
-#~ msgstr "Takip Anahtarı"
-
-#~ msgid "Enter Valid Key"
-#~ msgstr "Geçerli Bir Anahtar Giriniz"
-
-#~ msgid "Invalid Survelliance Key : Device does not Exist!"
-#~ msgstr "Geçersiz Anahtar : Böyle Bir Cihaz Yok !"
+msgstr "Anasayfaya Geri Dön"

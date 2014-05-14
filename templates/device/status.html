@@ -7,8 +7,9 @@
 {% block device_area %}
 
 <br/><br/><br/><br/>
-{% if device %}
+{% if devices %}
   <table height="350" border="1" align="center">
+   {% for device in devices %}
       <tr>
          <td colspan="2" align="center">{% trans "DEVICE INFORMATION" %}</td>
       </tr>
@@ -29,8 +30,8 @@
          <td>{{ device.record_date }}</td>
       </tr>
       <tr>
-         <td>{% trans "Last Name of Device's Owner" %}</td>
-         <td>{{ device.lastname }}</td>
+         <td>{% trans "Last Name of Device's Owner" %} </td>
+         <td> {{ device.owner_lastname }} </td>
       </tr>
       <tr>
          <td>{% trans "Current Status" %}</td>
@@ -40,6 +41,7 @@
          <td>{% trans "Delivery Date" %}</td>
          <td>{{ device.delivery_date }}</td>
       </tr>
+   {% endfor %}
    </table>
    
    <center> 
