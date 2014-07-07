@@ -28,7 +28,7 @@ IPython is used in project to get more efficient on shell while testing and quer
 
 Ipdb is used in project to debug when an error occurred.
 
-Heroku is chosen and used to deploy project on a virtual hosting and serving the www.khashelpdesk.com .
+Heroku is chosen and used to deploy project on a virtual hosting and serving.
 
 PEP8 is used to make codes in good quality and also make them appear more specific.
 
@@ -40,7 +40,7 @@ FUNCTIONS OF PROJECT
 ---------------------------
 Help Desk Device Surveillance System is designed for Kadir Has University Help Desk Personnel ( will be mentioned as admins) and the students, academics, executive personnel and the other people (will be mentioned as users) in the Kadir Has University.
 
-Admin-url of the HDDSS is www.khashelpdesk.com/admin to used by Help Desk Personnel, user-url of the HDDSS is www.khashelpdesk.com to used by the device owners.
+Admin-url of the HDDSS is /admin to used by Help Desk Personnel, user-url of the HDDSS is / to used by the device owners.
 
 Admins of  HDDSS are separated in 2 types. First type is Super user of  HDDSS admins.  Super user have all the permissions in HDDSS. These permissions are,
 
